@@ -1,0 +1,10 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.primary-button {
+    @include m.button1();
+}
+
+.secondary-button {
+    @include m.button2();
+}

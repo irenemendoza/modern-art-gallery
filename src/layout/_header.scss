@@ -1,1 +1,85 @@
 @use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.hero {
+    margin-bottom: 100px;
+    @include m.breakpoint(tablet) {
+        display: flex;
+        position: relative;
+    }
+    @include m.breakpoint(desktop) {
+        display: flex;
+        position: relative;
+        margin-bottom: 150px;
+    }
+    &_img {
+        width: 100%;
+        @include m.breakpoint(tablet) {
+            width: 437px;
+        }
+        @include m.breakpoint(desktop) {
+            width: 69%;
+            height: 800px;
+            background-color: v.$black;
+            display: flex;
+            justify-content: end;
+        }
+        .hero-img{
+            width: 100%;  
+            margin-bottom: 25px;
+            @include m.breakpoint(desktop) {
+                width: 470px;
+                margin-bottom: 0;
+            }
+        }
+    }
+    
+    .container {
+        @include m.breakpoint(tablet) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        @include m.breakpoint(desktop) {
+            padding-left: 152px;
+            padding-right: 152px;
+        }
+    }
+
+    &_content{      
+        @include m.breakpoint(tablet) {
+            width: 52%;
+            position: absolute;
+            top: 20%;
+            left: 48%;
+        }
+        @include m.breakpoint(desktop) {
+            display: flex;
+            width: 100%;
+            position: absolute;
+            justify-content: space-between;
+            left: 0px;
+            top: 200px;
+        }
+
+        h1 {
+            @include m.breakpoint(desktop) {
+                width: 415px;
+                margin-bottom: 0;
+            }
+        }
+        
+        p {
+            color: v.$dark-gray;
+            margin-bottom: 32px;  
+            width: 95%;
+            @include m.breakpoint(tablet) {
+                margin-bottom: 48px;
+                width: 85%;
+            }
+            @include m.breakpoint(desktop) {
+                width: 300px;
+                margin-bottom: 64px;
+            }
+        }
+    }
+}

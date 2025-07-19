@@ -1,0 +1,173 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+main {
+    margin-bottom: 120px;
+    .content {    
+        &_header {
+            @include m.breakpoint(tablet){
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 11px;
+            }
+            @include m.breakpoint(desktop) {
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+            }
+            img {
+                width: 100%;
+                margin-bottom: 20px;
+                 @include m.breakpoint(tablet){
+                    width: 398px;
+                    margin: 0;
+                }
+                @include m.breakpoint(desktop){
+                    width: 600px;
+                    height: 370px;
+                    object-fit: cover;
+                }
+            }
+        &_description {
+            @include m.breakpoint(tablet) {
+                order: -1;
+                width: 250px;
+            }
+            @include m.breakpoint(desktop) {
+                width: 400px;
+             
+            }
+
+            h2 {
+                margin-bottom: 21px;
+                width: 65%;
+                span {
+                    display: inline;
+                    white-space: nowrap;
+                }
+                .part1 {
+                    display: block;
+                }
+                @include m.breakpoint(tablet) {
+                    .part1, .part2, .part2 {
+                        display: block;
+                    }
+                }
+                @include m.breakpoint(desktop) {
+                    width: 81%;
+                    margin-bottom: 32px;
+                    .part1 {
+                        display: inline;
+                    }
+                    .part2 {
+                        display: inline;
+                        white-space: wrap;
+                    }
+                    .part3 {
+                        display: inline;
+                    }
+                }
+    
+            }
+            p {
+             margin-bottom: 30px;
+             width: 90%;
+             color: v.$dark-gray;
+             @include m.breakpoint(desktop) {
+                width: 80%;
+             }
+            }
+
+        }
+              }
+
+
+        &_main {
+            padding: 0;
+
+            @include m.breakpoint(tablet) {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1.42fr 1fr;
+                grid-template-rows: 1fr 1.27fr;
+                gap: 11px;
+            }
+
+            @include m.breakpoint(desktop) {
+                gap: 30px;
+            }
+          
+            img {
+                width: 100%;
+                margin-bottom: 16px;
+                height: 100%;
+                @include m.breakpoint(tablet) {
+                    margin-bottom: 0;
+                }
+            }
+
+            .img1 {
+                height: 480px;
+                @include m.breakpoint(tablet) {
+                    grid-column: 1;
+                    grid-row: 1 / span 2;
+                    height: 100%;
+                   
+                    width: 100%;
+                    
+                }
+            }
+
+            .img2 {
+                @include m.breakpoint(tablet) {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    grid-column: 2;
+                    grid-row: 1;
+                }
+            }
+
+
+         &_description {
+                padding: 48px 28px 49px 29px;
+                background-color: v.$black;
+                color: v.$white;
+
+                @include m.breakpoint(tablet) {
+                    padding: 85px 29px;
+                    grid-column-start: 2;
+                }
+
+                @include m.breakpoint(desktop) {
+                        padding: 65px 44px 64px 45px;
+                    }
+
+                h2 {
+                    margin-bottom: 24px;
+                    width: 100%;
+                    @include m.breakpoint(tablet) {
+                        width: 90%;
+                    }
+                }
+
+                
+                p {
+                    width: 100%;
+                    color: v.$white;
+                    font-weight: 100;
+                    @include m.breakpoint(tablet) {
+                        width: 90%;
+                    }
+                    @include m.breakpoint(desktop) {
+                        width:100%;
+                    }
+                }
+           }
+
+        
+     }
+
+    }
+}

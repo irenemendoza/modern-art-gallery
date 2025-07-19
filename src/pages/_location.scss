@@ -1,0 +1,104 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.location {
+    header {
+        width: 100%;
+        position: relative;
+        .location_hero_img {
+            width: 100%;
+            height: auto;
+            display: block;
+            
+        }
+        img.location_hero_img_main {
+                width: 100%;
+                height: auto;
+                display: block;
+                object-fit: cover;
+            }
+        
+        img.point {
+            display: none;
+            position: absolute;
+            @include m.breakpoint(tablet) {
+                display: block;
+                top: 44%;
+                left: 46%;
+                z-index: 1;
+            }
+            @include m.breakpoint(desktop) {
+                top: 42%;
+                left: 47.5%;
+                width: 66px;
+                height: 88px;
+            }
+        }
+      
+        
+
+        a {
+            position: absolute;
+            @include m.breakpoint(tablet) {
+                margin-left: 95px;
+            }
+            @include m.breakpoint(desktop) {
+                margin-left: 195px;
+            }
+        }
+    }
+
+    main {
+        margin-bottom: 0;
+        padding-bottom: 56px;
+        background-color: v.$black;
+        @include m.breakpoint(tablet) {
+            display: flex;
+            align-items: start;
+            gap: 68px;
+            padding: 88px 40px 80px 39px;
+            margin-bottom: 0;
+        }
+        @include m.breakpoint(desktop) {
+            padding: 104px 140px 128px;
+            justify-content: space-between;
+        }
+        h2 {
+            color: v.$white;
+            padding: 48px 0px;
+            @include m.breakpoint(tablet) {
+                padding: 0;
+            }
+            @include m.breakpoint(desktop) {
+                width: 250px;
+            }
+        }
+        
+        .main_location_content {
+            @include m.breakpoint(desktop) {
+                width: 510px;
+            }
+        }
+        h3 {
+            color: v.$brown;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-family: v.$text-font;
+            color: white;
+            font-weight: 100;
+            width: 95%;
+            @include m.breakpoint(tablet) {
+                width: 90%;
+            }
+        }
+
+        p.address {
+            margin-bottom: 20px;
+        }
+        
+    }
+
+    
+}
