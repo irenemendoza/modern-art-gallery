@@ -1,4 +1,10 @@
 @use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
 body {
     display: block;
+    @include m.breakpoint(desktop) {
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
