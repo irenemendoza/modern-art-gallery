@@ -97,7 +97,7 @@ main {
                     line-height: 1.56;
                     width: 100%;
                     margin-bottom: 3.75vh;
-                    font-weight: 300;
+                    font-weight: 280;
                 }
                 @include m.breakpoint(desktop) {
                     width: 80%;
@@ -196,7 +196,7 @@ main {
                     line-height: 1.6;
                     @include m.breakpoint(tablet) {
                         font-size: 2.25vw;
-                        font-weight: 300;
+                        font-weight: 250;
                         line-height: 1.56;
                         width: 90%;
                     }

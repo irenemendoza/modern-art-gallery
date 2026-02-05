@@ -78,7 +78,8 @@
             @include m.breakpoint(tablet) {
                 padding: 0;
                 width: 29.04vw;
-                font-size: 6.7vw;
+                font-size: 6.8vw;
+                line-height: 0.95;
             }
             @include m.breakpoint(desktop) {
                 width: 24.31vw;
@@ -101,7 +102,7 @@
             margin-bottom: 5.33vw;
             font-size: 3.4rem;
             @include m.breakpoint(tablet) {
-                font-size: 4.7rem;
+                font-size: 3.8rem;
                 margin-bottom: 2.60vw;
             }
             @include m.breakpoint(desktop) {
@@ -117,8 +118,8 @@
             width: 100%;
             @include m.breakpoint(tablet) {
                 width: 97%;
-                font-size: 2.3rem;
-                font-weight: 300;
+                font-size: 1.9rem;
+                font-weight: 280;
                 line-height: 1.6;
             }
             @include m.breakpoint(desktop) {

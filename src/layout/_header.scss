@@ -71,7 +71,7 @@
             font-size: 5.8rem;
             margin-bottom: 8.53vw;
             @include m.breakpoint(tablet){
-                font-size: 9.4rem;
+                font-size: 7.5rem;
                 width: 44.15vw;
                 margin-bottom: 6.25vw;
             }
@@ -94,7 +94,7 @@
                 margin-bottom: 48px;
                 font-weight: 300;
                 width: 100%;
-                font-size: 2.4rem;
+                font-size: 1.9rem;
                 line-height: 1.65;
             }
             @include m.breakpoint(desktop) {
