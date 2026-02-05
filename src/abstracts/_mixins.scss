@@ -6,18 +6,8 @@
       @content;
     }
   }
-  @if $bp == tablethorizontal {
-    @media (min-width: v.$bp-tablet-horizontal) {
-      @content;
-    }
-  }
   @if $bp == desktop {
     @media (min-width: v.$bp-desktop) {
-      @content;
-    }
-  }
-  @if $bp == desktopxl {
-    @media (min-width: v.$bp-desktop-xk) {
       @content;
     }
   }
