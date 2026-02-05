@@ -27,13 +27,30 @@
   font-family: v.$title-font;
   display: inline-flex;
   align-items: center;
-  padding: 24px 35px 24px 32px;
-  font-size: 20px;
-  letter-spacing: 3.64px;
+  font-size: 2.05rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
   color: v.$white;
   background-color: v.$black;
   position: relative;
   overflow: visible;
+  width: 54.4vw;
+  height: 19.2vw;
+  padding: 6.4vw 9.33vw 6.4vw 8.53vw;
+  
+  @include breakpoint(tablet) {
+    width: 26.56vw;
+    height: 9.38vw;
+    font-size: 2.7rem;
+    padding: 3.13vw 4.56vw 3.13vw 4.17vw;
+  }
+  @include breakpoint(desktop) {
+    font-size: 1.7rem;
+    width: 14.17vw;
+    height: 5vw;
+    padding: 1.67vw 2.43vw 1.67vw 2.22vw;
+  }
+
   &:hover {
     background-color: v.$brown;
     &::after {
@@ -44,8 +61,6 @@
   &::after {
     display: inline-block;
     content: '';
-    width: 56px;
-    height: 72px;
     background-image: url('/modern-art-gallery/img/forward-icon.svg');
     background-color: v.$brown;
     background-repeat: no-repeat;
@@ -53,22 +68,50 @@
     position: absolute;
     top: 0px;
     right: -56px;
-    
+    width: 14.93vw;
+    height: 19.2vw;
+    @include breakpoint(tablet) {
+      width: 7.29vw;
+      height: 9.38vw;
+      right: -7.29vw;
+    }
+    @include breakpoint(desktop) {
+      width: 3.89vw;
+      height: 5vw;
+      right: -3.89vw;
+    }
   }
 }
 
 @mixin button2(){
   font-family: v.$title-font;
-  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 6.4vw 9.33vw 6.4vw 8.53vw;
+  display: inline-flex;
   align-items: center;
-  padding: 24px 35px 24px 32px;
-  margin-left: 56px;
-  font-size: 20px;
-  letter-spacing: 3.64px;
+  letter-spacing: 2.5px;
   color: v.$white;
   background-color: v.$black;
   position: relative;
   overflow: visible;
+  width: 55.47vw;
+  height: 19.20vw;
+  
+  @include breakpoint(tablet) {
+    width: 27.08vw;
+    height: 9.38vw;
+    font-size: 2.73rem;
+    font-weight: 600;
+    padding: 3.13vw 4.56vw 3.13vw 4.17vw;
+  }
+  @include breakpoint(desktop) {
+    font-size: 1.7rem;
+    font-weight: 700;
+    width: 14.17vw;
+    height: 5vw;
+    padding: 1.67vw 2.43vw 1.67vw 2.22vw;
+  }
   &:hover {
     background-color: v.$brown;
     &::before {
@@ -78,14 +121,24 @@
   &::before {
     display: inline-block;
     content: '';
-    width: 56px;
-    height: 72px;
     background-image: url('/modern-art-gallery/img/before-icon.svg');
     background-color: v.$brown;
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
     top: 0;
-    left: -56px;
+    width: 14.93vw;
+    height: 19.2vw;
+    left: -14.93vw;
+    @include breakpoint(tablet) {
+      width: 7.29vw;
+      height: 9.38vw;
+      left: -7.29vw;
+    }
+    @include breakpoint(desktop) {
+      width: 3.89vw;
+      height: 5vw;
+      left: -3.89vw;
+    }
   }
 }

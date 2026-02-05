@@ -8,59 +8,67 @@ footer {
         display: flex;
         gap: 64px;
         align-items: start;
-        padding: 56px 39px;
+        padding: 7.29vw 5.21vw 7.29vw 5.08vw;
     }
 
     @include m.breakpoint(desktop) {
-        padding: 60px 140px;
+        padding: 5.56vw 11.46vw;
         display: flex;
         align-items: start;
-        gap: 100px;
+        gap: 9.72vw;
     }
   
     img.logo {
         width: 110px;
         margin-bottom: 30px;
+        @include m.breakpoint(tablet) {
+            width: 14.32vw;
+            margin-bottom: 0;
+        } 
         @include m.breakpoint(desktop) {
-            width: 150px;
+            width: 11.11vw;
             margin-bottom: 0;
         } 
     }
     
     p {
-        font-size: 16px;
-        line-height: 26px;
-        width: 95%;
-        margin-bottom: 38px;
-        font-weight: 100;
         @include m.breakpoint(tablet) {
             padding-right: 100px;
+            font-size: 2.2rem;
             margin: 0;
-            width: 50%;
+            width: 54%;
+            line-height: 1.65;
+            font-weight: 250;
         }
         @include m.breakpoint(desktop) {
-            width: 38%;
+            width: 29.86vw;
             padding: 0;
+            font-size: 1.6rem;
+            font-weight: 200;
         }
     }
-    
-    .footer_location p{
-            color: v.$black;
-            font-weight: 300;
-        }
-
 
     .contact {
         margin-left: auto;
         ul {
             display: flex;
             align-items: center;
-            gap: 20px;
-            line-height: 0;
-            
+            gap: 5.33vw;
+            @include m.breakpoint(tablet) {
+                gap: 2.60vw;
+            }
+            @include m.breakpoint(desktop) {
+                gap: 1.39vw;
+                line-height: 0;
+            }
             img {
-                width: 20px;
-                margin-bottom: 0;
+                @include m.breakpoint(tablet) {
+                    width: 2.60vw;
+                }
+                @include m.breakpoint(desktop) {
+                    width: 1.39vw;
+                    margin-bottom: 0;
+                }
             }
         }
     }
@@ -69,13 +77,51 @@ footer {
 footer.main_footer {
     background-color: v.$black;
     p{
+        font-size: 1.6rem;
+        line-height: 3.5vh;
+        width: 100%;
+        font-weight: 250;
+        margin-bottom: 10.13vw;
         color: v.$white;
+        @include m.breakpoint(tablet) {
+            padding-right: 100px;
+            font-size: 2.2rem;
+            margin: 0;
+            width: 54%;
+            line-height: 1.65;
+            font-weight: 250;
+        }
+        @include m.breakpoint(desktop) {
+            width: 29.86vw;
+            padding: 0;
+            font-size: 1.6rem;
+            font-weight: 200;
+        }
     }
 }
 footer.location_footer {
         background-color: v.$brown;
         p {
+            font-size: 1.6rem;
+            line-height: 3.5vh;
+            width: 100%;
+            margin-bottom: 10.13vw;
             color: v.$black;
             font-weight: 300;
+            @include m.breakpoint(tablet) {
+                padding-right: 100px;
+                font-size:2.1rem;
+                line-height: 1.7;
+                margin: 0;
+                width: 50%;
+                font-weight: 280;
+            }
+            @include m.breakpoint(desktop) {
+                font-weight: 300;
+                font-size: 1.6rem;
+                width: 29.86vw;
+                line-height: 1.5;
+                padding: 0;
+            }
         }
     }

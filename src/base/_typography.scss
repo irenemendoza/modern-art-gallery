@@ -3,51 +3,42 @@
 
 h1 {
     font-family: v.$title-font;
-            font-size: v.$m-title-size;
-            font-weight: 900;
-            width: 79%;
-            line-height: v.$m-title-line-spacing;
-            margin-bottom: 32px;
-            @include m.breakpoint(tablet) {
-                font-size: v.$l-title-size;
-                line-height: 65px;
-                margin-bottom: 48px;
-            }
-            @include m.breakpoint(desktop) {
-                font-size: v.$xl-title-size;
-                color: v.$white;
-                line-height: v.$xl-title-line-spacing;
-            }
+    font-weight: 900;
+    width: 100%;
+    line-height: v.$xl-title-line-spacing;
+    margin-bottom: 32px;
+    @include m.breakpoint(tablet) {
+        margin-bottom: 48px;
+        font-size: 8rem;
         }
+    @include m.breakpoint(desktop) {
+        color: v.$white;
+        font-size: clamp(6rem, 6.7vw, 12rem);
+        }
+    }
 
  h2 {
         font-family: v.$title-font;
-        font-size: v.$s-title-size;
-        line-height: v.$s-title-line-spacing;
+        font-size: clamp(5rem, 4.86vw, 7.7rem);
+        line-height: v.$l-title-line-spacing;
         text-transform: uppercase;
         font-weight: 900;
-        width: 87%;
+        width: 100%;
         @include m.breakpoint(tablet) {
             margin-bottom: 24px;
+            font-size: 6.5rem;
         }
         @include m.breakpoint(desktop) {
-            font-size: v.$m-title-size;
-            line-height: v.$m-title-line-spacing;
         }
     }
 h3 {
     font-family: v.$title-font;
-    font-size: 32px;
-    line-height: 32px;
+    font-size: clamp(3.2rem, 7.17vw, v.$m-title-size);
+    line-height: v.$m-title-line-spacing;
 }
 
-    p {
-        font-family: v.$text-font;
-        font-size: v.$s-text-size;
-        line-height: v.$s-text-line-spacing;
-        font-weight: 300;
-        @include m.breakpoint(desktop) {
-            font-size: v.$m-text-size;
-            line-height: v.$m-text-line-spacing;
-        }
-    }
+p {
+    font-family: v.$text-font;
+    font-size: clamp(v.$s-text-size, 1.51vw, 24rem);
+    font-weight: 300;
+}

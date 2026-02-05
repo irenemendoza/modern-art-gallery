@@ -1,26 +1,26 @@
 $bp-tablet: 768px;
 $bp-tablet-horizontal: 1024px;
 $bp-desktop: 1200px;
-$bp-desktop-xk: 1440px;
+$bp-desktop-xl: 1440px;
 
 $white: #FFFFFF;
 $brown: #D5966C;
 $black: #151515;
 $dark-gray: #444444;
 
-$xl-title-size: 85px;
-$xl-title-line-spacing: 82px;
-$l-title-size: 70px;
-$l-title-line-spacing: 70px;
-$m-title-size: 55px;
-$m-title-line-spacing: 52px;
-$s-title-size: 50px;
-$s-title-line-spacing: 45px;
+$xl-title-size: 9.6rem;
+$xl-title-line-spacing:0.917;
+$l-title-size: 7rem;
+$l-title-line-spacing: 1;
+$m-title-size: 6rem;
+$m-title-line-spacing: 0.83;
+$s-title-size: 3.6rem;
+$s-title-line-spacing: 1;
 
-$m-text-size: 22px;
-$m-text-line-spacing: 31px;
-$s-text-size: 18px;
-$s-text-line-spacing: 28px;
+$m-text-size: 2.2rem;
+$m-text-line-spacing: 1.45;
+$s-text-size: 1.8rem;
+$s-text-line-spacing: 1.56;
 
 $title-font: "Big Shoulders", sans-serif;
 $text-font: "Outfit", sans-serif;

@@ -2,91 +2,107 @@
 @use '../abstracts/mixins' as m;
 
 .hero {
-    margin-bottom: 100px;
     width: 100%;
+    margin-bottom: 32vw;
     @include m.breakpoint(tablet) {
         display: flex;
         position: relative;
+        margin-bottom: 15.63vw;
     }
     @include m.breakpoint(desktop) {
-        display: flex;
-        position: relative;
-        margin-bottom: 150px;
-        justify-content: space-between;
+       background: linear-gradient(
+        to right,
+        v.$black 50%,
+        v.$white 50%
+       );
+       margin-bottom: 12.50vw;
     }
     &_img {
-        width: 100%;
         @include m.breakpoint(tablet) {
-            width: 437px;
+            width: 57%;
         }
         @include m.breakpoint(desktop) {
-            width: 69%;
-            height: 800px;
-            background-color: v.$black;
-            display: flex;
-            justify-content: end;
+            width: 37.5%;
+            height: auto;
+            display: block;
+            margin: auto;
         }
         .hero-img{
-            width: 100%;  
-            margin-bottom: 25px;
-            @include m.breakpoint(desktop) {
-                width: 470px;
+            margin-bottom: 8.53vw;
+            @include m.breakpoint(tablet) {
                 margin-bottom: 0;
+            }
+            @include m.breakpoint(desktop) {
+                width: 100%;
+                height: auto;
+                margin-bottom: 0;
+                display: block;
             }
         }
     }
     
-    .container {
-        @include m.breakpoint(tablet) {
-            padding-left: 0;
-            padding-right: 0;
-        }
-        @include m.breakpoint(desktop) {
-            padding-left: 12%;
-            padding-right: 7%;
-        }
-    }
 
     &_content{      
         @include m.breakpoint(tablet) {
-            width: 52%;
+            width: 44.14vw;
             position: absolute;
-            top: 20%;
-            left: 48%;
+            top: 20vw;
+            left: 45.5vw;
         }
         @include m.breakpoint(desktop) {
-            display: flex;
             width: 100%;
+            display: flex;
             position: absolute;
+            left: 0;
+            top: 25%;
             justify-content: space-between;
-            left: 0px;
-            top: 200px;
         }
 
         &_description {
+            @include m.breakpoint(tablet) {
+                width: 44.14vw;
+            }
             @include m.breakpoint(desktop) {
-                width: fit-content;
-                max-width: 36%;
+                width: 25vw;
             }
         }
 
         h1 {
+            font-size: 5.8rem;
+            margin-bottom: 8.53vw;
+            @include m.breakpoint(tablet){
+                font-size: 9.4rem;
+                width: 44.15vw;
+                margin-bottom: 6.25vw;
+            }
             @include m.breakpoint(desktop) {
-                width: 4%;
+                width: 50vw;
+                color: v.$white;
+                font-size: 6.65vw;
                 margin-bottom: 0;
             }
         }
         
         p {
             color: v.$dark-gray;
+            font-weight: 270;
             margin-bottom: 32px;  
-            width: 95%;
+            line-height: 1.6;
+            margin-bottom: 8.53vw;
+            
             @include m.breakpoint(tablet) {
                 margin-bottom: 48px;
-                width: 85%;
+                font-weight: 300;
+                width: 100%;
+                font-size: 2.4rem;
+                line-height: 1.65;
             }
             @include m.breakpoint(desktop) {
-                margin-bottom: 64px;
+                width: 25vw;
+                margin-bottom: 8vh;
+                font-weight: 250;
+                line-height: 1.45;
+                font-size: 2rem;
             }
         }
     }

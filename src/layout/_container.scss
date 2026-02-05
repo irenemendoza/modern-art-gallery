@@ -5,13 +5,13 @@
     padding-right: 16px;
 
     @include m.breakpoint(tablet) {
-        padding-left: 39px;
-        padding-right: 40px;
+        padding-left: 5.08vw;
+        padding-right: 5.20vw;
     }
 
     @include m.breakpoint(desktop) {
-        padding-left: 152px;
-        padding-right: 152px;
+        padding-left: 11.46vw;
+        padding-right: 10.65vw;
     }
 }
 
